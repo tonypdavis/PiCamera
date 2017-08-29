@@ -1,5 +1,6 @@
 # Motion Detection Pi Camera 
-# created on 16.07.2017 Tony Davis 
+# created on 16.07.2017 Tony Davis
+#---------------------------------#
 
 import RPi.GPIO as GPIO
 from picamera import PiCamera
