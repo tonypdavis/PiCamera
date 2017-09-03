@@ -9,11 +9,24 @@ import time
 
 timer_a = time.time() # duration timer
 camera = PiCamera()
-date = datetime.datetime.now().strftime("%d_%m_%Y_%H_%M_%S")
 camera.resolution = (1280, 720)
+camera.sharpness = 0
+camera.contrast = 0
+camera.brightness = 50
+camera.saturation = 0
+camera.ISO = 0
+camera.video_stabilization = False
+camera.exposure_compensation = 0
+camera.exposure_mode = 'auto'
+camera.awb_mode = 'auto'
+camera.image_effect = 'none'
+camera.meter_mode = 'average'
+#camera.colour_effect = 'None'
 camera.rotation = 90
-#camera.contrast = 10
-#camera.brightness = 50
+camera.contrast = 0
+
+
+date = datetime.datetime.now().strftime("%d_%m_%Y_%H_%M_%S")
 
 
 #------------- change these values to set freuency and duration--------------------#
@@ -38,6 +51,7 @@ while True:
     
     if time.time() - timer_a > duration:  # quit the program when the duration has been reached
 		quit()
+		
         
 
 
